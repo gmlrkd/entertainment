@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ManagerJoinControl">
+	<children>
+      <HBox prefHeight="47.0" prefWidth="300.0" style="-fx-background-color: yellow;">
+         <children>
+            <Label prefHeight="52.0" prefWidth="228.0" text="관리자 등록">
+               <font>
+                  <Font name="굵은안상수체" size="34.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+		<HBox alignment="BOTTOM_LEFT" prefHeight="49.0" prefWidth="300.0" spacing="20.0">
+			<children>
+				<Label text="이름" />
+				<TextField fx:id="txtName" prefHeight="23.0" prefWidth="86.0" />
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+			<padding>
+				<Insets left="35.0" />
+			</padding>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="38.0" prefWidth="300.0" spacing="10.0">
+			<children>
+				<Label text="Email" />
+				<TextField fx:id="txtEmail" prefHeight="23.0" prefWidth="186.0" />
+			</children>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="36.0" prefWidth="300.0" spacing="10.0">
+			<children>
+				<Label text="전화번호" />
+				<TextField fx:id="txtPhoneNumber" prefHeight="23.0" prefWidth="171.0" promptText="'-' 없이 입력하세요" />
+			</children>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="38.0" prefWidth="300.0" spacing="10.0">
+			<children>
+				<Label text="사원번호" />
+				<TextField fx:id="txtEmployeeNumber" />
+			</children>
+			<padding>
+				<Insets right="30.0" />
+			</padding>
+		</HBox>
+		<HBox alignment="TOP_CENTER" prefHeight="59.0" prefWidth="300.0" spacing="10.0">
+			<children>
+				<ComboBox fx:id="cbList" prefWidth="150.0" promptText="직책선택" />
+			</children>
+		</HBox>
+		<HBox prefHeight="37.0" prefWidth="300.0" spacing="10.0">
+			<children>
+				<Label prefHeight="18.0" prefWidth="13.0" text="ID">
+				</Label>
+				<TextField fx:id="txtId" />
+				<Button fx:id="btnOverlep" mnemonicParsing="false" text="중복확인" />
+			</children>
+			<padding>
+				<Insets left="42.0" />
+			</padding>
+		</HBox>
+		<HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="300.0" spacing="10.0">
+			<children>
+				<Label text="PW" />
+				<TextField fx:id="txtPassword" />
+			</children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="37.0" />
+         </padding>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="37.0" prefWidth="300.0">
+         <children>
+            <Label text="아이디 중복확인이 되어야 등록할 수 있습니다. " />
+         </children></HBox>
+		<HBox alignment="CENTER" prefHeight="57.0" prefWidth="300.0" spacing="20.0">
+			<children>
+				<Button fx:id="btnOk" mnemonicParsing="false" text="관리자 등록" />
+				<Button fx:id="btnCancel" mnemonicParsing="false" text="취소" />
+			</children>
+		</HBox>
+	</children>
+	<padding>
+		<Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+	</padding>
+</VBox>

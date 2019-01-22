@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ApplicantViewControl">
+	<tabs>
+		<Tab fx:id="teb1" text="지원자 정보">
+			<content>
+				<BorderPane prefHeight="566.0" prefWidth="1000.0" style="-fx-background-color: dimgray;">
+					<left>
+						<VBox prefHeight="517.0" prefWidth="367.0" BorderPane.alignment="CENTER">
+							<children>
+								<HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="816.0">
+									<children>
+										<Label text="지원자 사진" textFill="#f5eeee" />
+									</children>
+								</HBox>
+								<ImageView fx:id="imageView" fitHeight="458.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true" />
+							</children>
+						</VBox>
+					</left>
+					<center>
+						<VBox prefHeight="517.0" prefWidth="236.0" BorderPane.alignment="CENTER">
+							<children>
+								<HBox fx:id="hBox" alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="613.0">
+									<children>
+										<Label text="지원자정보" textFill="WHITE" />
+									</children>
+								</HBox>
+								<HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="287.0" spacing="5.0">
+									<children>
+										<Label text="이름" textFill="WHITE" />
+										<TextField fx:id="txtName" editable="false" prefHeight="23.0" prefWidth="64.0" />
+										<Label text="생년월일" textFill="WHITE" />
+										<TextField fx:id="txtAge" editable="false" prefHeight="23.0" prefWidth="87.0" />
+									</children>
+								</HBox>
+								<HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="287.0" spacing="20.0">
+									<children>
+										<Label text="키" textFill="WHITE" />
+										<TextField fx:id="txtHeight" editable="false" prefHeight="23.0" prefWidth="65.0" />
+										<Label text="몸무게" textFill="WHITE" />
+										<TextField fx:id="txtWeight" editable="false" prefHeight="23.0" prefWidth="62.0" />
+									</children>
+								</HBox>
+								<HBox prefHeight="30.0" prefWidth="287.0" spacing="5.0">
+									<children>
+										<Label text="핸드폰번호" textFill="WHITE" />
+										<TextField fx:id="txtPhoneNumber" editable="false" prefHeight="23.0" prefWidth="171.0" />
+									</children>
+								</HBox>
+								<HBox prefHeight="60.0" prefWidth="396.0" spacing="5.0">
+									<children>
+										<Label text="이메일" textFill="WHITE" />
+										<TextField fx:id="txtEmail" editable="false" prefHeight="23.0" prefWidth="195.0" />
+									</children>
+								</HBox>
+								<HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="287.0">
+									<children>
+										<Label text="특이사항" textFill="WHITE" />
+									</children>
+								</HBox>
+								<HBox prefHeight="280.0" prefWidth="483.0">
+									<children>
+										<TextArea fx:id="txtSpecialNote" editable="false" prefHeight="280.0" prefWidth="308.0">
+											<effect>
+												<DropShadow color="#e461ca" height="58.81" offsetX="5.0" offsetY="10.0" radius="30.5725" width="65.48" />
+											</effect>
+										</TextArea>
+									</children>
+								</HBox>
+							</children>
+							<opaqueInsets>
+								<Insets left="5.0" />
+							</opaqueInsets>
+						</VBox>
+					</center>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+					<right>
+						<VBox prefHeight="517.0" prefWidth="470.0" BorderPane.alignment="CENTER">
+							<children>
+								<Label prefHeight="33.0" prefWidth="64.0" text="지원자 검색" textFill="WHITE" />
+								<HBox prefHeight="155.0" prefWidth="460.0">
+									<children>
+										<VBox prefHeight="265.0" prefWidth="455.0">
+											<children>
+												<HBox prefHeight="39.0" prefWidth="459.0" spacing="5.0">
+													<children>
+														<Label text="이름" textFill="WHITE">
+															<font>
+																<Font name="AR BONNIE" size="12.0" />
+															</font>
+														</Label>
+														<TextField fx:id="txtSearchName" prefHeight="23.0" prefWidth="77.0" promptText="이름을 입력하세요" />
+														<Button fx:id="btnSearchName" mnemonicParsing="false" rotate="36.9" text="Search">
+															<effect>
+																<DropShadow color="#29c8f8" height="47.69" radius="31.4975" width="80.3" />
+															</effect>
+														</Button>
+													</children>
+												</HBox>
+												<Label text="등록 기간별 검색" textFill="WHITE" />
+												<HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="213.0" spacing="10.0">
+													<children>
+														<DatePicker fx:id="dpStartDay" promptText="시작날짜" />
+														<Label alignment="TOP_CENTER" prefHeight="22.0" prefWidth="24.0" text="~">
+															<font>
+																<Font size="25.0" />
+															</font>
+														</Label>
+													</children>
+												</HBox>
+											</children>
+										</VBox>
+										<VBox prefHeight="265.0" prefWidth="470.0">
+											<children>
+												<HBox prefHeight="36.0" prefWidth="233.0" spacing="5.0">
+													<children>
+														<ComboBox fx:id="cbList" prefWidth="150.0" promptText="지원 분야별 검색" />
+														<Button fx:id="btnSearchList" mnemonicParsing="false" text="Search" />
+													</children>
+												</HBox>
+												<HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="228.0" spacing="5.0">
+													<children>
+														<DatePicker fx:id="dpEndDay" promptText="끝나는 날짜" />
+														<Button fx:id="btnSaerchDate" mnemonicParsing="false" text="Search" />
+													</children>
+												</HBox>
+											</children>
+										</VBox>
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox prefHeight="24.0" prefWidth="460.0" spacing="10.0">
+									<children>
+										<Label text="지원자 목록" textFill="WHITE" />
+                              <Button fx:id="btnTotal" mnemonicParsing="false" text="지원자 전체보기" />
+									</children>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+								</HBox>
+								<HBox prefHeight="254.0" prefWidth="460.0">
+									<children>
+										<TableView fx:id="tableView" prefHeight="187.0" prefWidth="460.0" />
+									</children>
+								</HBox>
+								<HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="326.0">
+									<children>
+										<Button fx:id="btnCancel" mnemonicParsing="false" text="메인으로">
+										</Button>
+									</children>
+								</HBox>
+							</children>
+							<opaqueInsets>
+								<Insets left="10.0" />
+							</opaqueInsets>
+							<padding>
+								<Insets right="10.0" />
+							</padding>
+						</VBox>
+					</right>
+				</BorderPane>
+			</content>
+		</Tab>
+		<Tab fx:id="tab2" text="통계">
+			<content>
+				<VBox prefHeight="537.0" prefWidth="890.0">
+					<children>
+						<HBox prefHeight="569.0" prefWidth="1200.0">
+							<children>
+								<VBox prefHeight="537.0" prefWidth="574.0">
+									<children>
+										<PieChart fx:id="pieChart" prefHeight="537.0" prefWidth="930.0" title="지원분야별 지원자 비율" />
+									</children>
+								</VBox>
+								<VBox prefHeight="537.0" prefWidth="619.0">
+									<children>
+										<BarChart fx:id="barChart" prefHeight="533.0" prefWidth="619.0" title="지원분야별 지원자 통계">
+											<xAxis>
+												<CategoryAxis side="BOTTOM" />
+											</xAxis>
+											<yAxis>
+												<NumberAxis side="LEFT" />
+											</yAxis>
+										</BarChart>
+									</children>
+								</VBox>
+							</children>
+						</HBox>
+					</children>
+				</VBox>
+			</content>
+		</Tab>
+	</tabs>
+	<opaqueInsets>
+		<Insets />
+	</opaqueInsets>
+</TabPane>
